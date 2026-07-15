@@ -32,13 +32,12 @@ const MIME = {
   ".webmanifest": "application/manifest+json; charset=utf-8",
 };
 
-// Cache: los assets pesados (video/imagen) se cachean 1 día,
-// css/js 1 hora, y el html nunca (para que los cambios se vean al instante).
+// Cache: los assets pesados (video/imagen) se cachean 1 día;
+// html, css y js nunca, para que cada deploy se vea al instante.
 function cacheControl(ext) {
-  if (ext === ".html") return "no-cache";
   if ([".mp4", ".webm", ".png", ".jpg", ".jpeg", ".webp", ".gif"].includes(ext))
     return "public, max-age=86400";
-  return "public, max-age=3600";
+  return "no-cache";
 }
 
 function send(req, res, filePath, stats) {
