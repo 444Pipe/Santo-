@@ -37,6 +37,8 @@
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+    <symbol id="i-sound-on" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></symbol>
+    <symbol id="i-sound-off" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></symbol>
   </svg>
 
   <!-- ══════════ PRELOADER ══════════ -->
@@ -117,10 +119,21 @@
       <div class="container about__grid">
         <div class="about__media reveal">
           <div class="phone-frame">
-            <video id="chefVideo" src="statics/video.mp4" playsinline preload="metadata"></video>
-            <button class="phone-frame__play" id="chefPlayBtn" aria-label="Reproducir video del chef">
-              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            </button>
+            <span class="phone-frame__sidebtn phone-frame__sidebtn--l1"></span>
+            <span class="phone-frame__sidebtn phone-frame__sidebtn--l2"></span>
+            <span class="phone-frame__sidebtn phone-frame__sidebtn--l3"></span>
+            <span class="phone-frame__sidebtn phone-frame__sidebtn--r"></span>
+            <div class="phone-frame__screen">
+              <span class="phone-frame__island"></span>
+              <video id="chefVideo" src="statics/video.mp4" playsinline preload="metadata"></video>
+              <button class="phone-frame__play" id="chefPlayBtn" aria-label="Reproducir video del chef">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <button class="phone-frame__mute" id="chefMuteBtn" aria-label="Silenciar">
+                <svg class="icon icon--on" aria-hidden="true"><use href="#i-sound-on"/></svg>
+                <svg class="icon icon--off" aria-hidden="true"><use href="#i-sound-off"/></svg>
+              </button>
+            </div>
           </div>
           <p class="about__media-hint"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-play"/></svg> Conoce nuestra historia en voz del chef</p>
         </div>

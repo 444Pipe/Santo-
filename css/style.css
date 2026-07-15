@@ -498,20 +498,58 @@ body::before {
 
 .about__media { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
 
+/* Mockup de iPhone: bisel, botones laterales, isla dinámica */
 .phone-frame {
   position: relative;
   width: min(320px, 80vw);
-  aspect-ratio: 9 / 16;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1.5px solid var(--borde);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65), 0 0 0 8px rgba(255, 255, 255, 0.02);
-  background: var(--carbon-2);
-  cursor: pointer;
+  padding: 11px;
+  border-radius: 54px;
+  background: linear-gradient(145deg, #2b2b2f, #0e0e10);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.07),
+    inset 0 0 0 5px rgba(0, 0, 0, 0.85);
   transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
 }
-.phone-frame:hover { transform: translateY(-6px) rotate(-0.5deg); box-shadow: 0 40px 100px rgba(0, 0, 0, 0.75), var(--shadow-gold); }
-.phone-frame video { width: 100%; height: 100%; object-fit: cover; }
+.phone-frame:hover {
+  transform: translateY(-6px) rotate(-0.5deg);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.75), var(--shadow-gold);
+}
+
+.phone-frame__sidebtn {
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #3a3a3f, #1c1c1f);
+}
+.phone-frame__sidebtn--l1 { left: -3px; top: 18%; height: 26px; }
+.phone-frame__sidebtn--l2 { left: -3px; top: 26%; height: 48px; }
+.phone-frame__sidebtn--l3 { left: -3px; top: 37%; height: 48px; }
+.phone-frame__sidebtn--r { right: -3px; top: 29%; height: 74px; }
+
+.phone-frame__screen {
+  position: relative;
+  aspect-ratio: 9 / 17.5;
+  border-radius: 44px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+.phone-frame__screen video { width: 100%; height: 100%; object-fit: cover; }
+
+.phone-frame__island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36%;
+  height: 25px;
+  background: #060607;
+  border-radius: 999px;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.05);
+}
 
 .phone-frame__play {
   position: absolute;
@@ -529,11 +567,35 @@ body::before {
   cursor: pointer;
   box-shadow: var(--shadow-gold);
   transition: transform 0.35s var(--ease), opacity 0.3s;
+  z-index: 4;
 }
 .phone-frame__play:hover { transform: scale(1.1); }
 .phone-frame__play svg { margin-left: 4px; }
 .phone-frame.is-playing .phone-frame__play { opacity: 0; pointer-events: none; }
-.phone-frame.is-playing:hover .phone-frame__play { opacity: 0.92; pointer-events: auto; }
+
+.phone-frame__mute {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(42, 42, 47, 0.62);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s var(--ease);
+}
+.phone-frame__mute:hover { background: rgba(64, 64, 70, 0.78); transform: scale(1.08); }
+.phone-frame__mute .icon { width: 20px; height: 20px; }
+.phone-frame__mute .icon--off { display: none; }
+.phone-frame__mute.is-muted .icon--on { display: none; }
+.phone-frame__mute.is-muted .icon--off { display: block; }
 
 .about__media-hint {
   font-size: 0.82rem;

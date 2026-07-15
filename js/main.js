@@ -256,12 +256,12 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 // ══════════ VIDEO DEL CHEF ══════════
 const chefVideo = document.getElementById("chefVideo");
 const chefPlayBtn = document.getElementById("chefPlayBtn");
+const chefMuteBtn = document.getElementById("chefMuteBtn");
 const phoneFrame = document.querySelector(".phone-frame");
 
 if (chefVideo && chefPlayBtn) {
   const toggleChef = () => {
     if (chefVideo.paused) {
-      chefVideo.muted = false;
       chefVideo.play();
       phoneFrame.classList.add("is-playing");
       chefPlayBtn.setAttribute("aria-label", "Pausar video del chef");
@@ -280,6 +280,19 @@ if (chefVideo && chefPlayBtn) {
     phoneFrame.classList.remove("is-playing");
     chefVideo.currentTime = 0;
   });
+
+  // Botón de silencio (como el de la referencia)
+  if (chefMuteBtn) {
+    chefMuteBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      chefVideo.muted = !chefVideo.muted;
+      chefMuteBtn.classList.toggle("is-muted", chefVideo.muted);
+      chefMuteBtn.setAttribute(
+        "aria-label",
+        chefVideo.muted ? "Activar sonido" : "Silenciar"
+      );
+    });
+  }
   // Pausar si sale de pantalla
   new IntersectionObserver(
     (entries) => {
