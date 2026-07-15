@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <title>SANTO — Hamburguesas &amp; Bistró | Restrepo, Meta</title>
+  <meta name="description" content="SANTO Hamburguesas & Bistró del Chef Luciano Gómez. Hamburguesas artesanales, costillas BBQ, sándwiches y más en el centro de Restrepo, Meta. Domicilios: 312 395 7174." />
+  <meta property="og:title" content="SANTO — Hamburguesas & Bistró" />
+  <meta property="og:description" content="Sabor que se respeta. Hamburguesas y bistró en Restrepo, Meta. Todos los días de 5:00 a 10:00 pm." />
+  <meta property="og:image" content="statics/imagen.jpg" />
+  <link rel="icon" type="image/png" href="statics/logo santo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════ SPRITE DE ICONOS ══════════ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 13.8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-bread" viewBox="0 0 24 24"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4 3 3 0 0 1-2 2.83V19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8.17A3 3 0 0 1 4 8Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10a8 8 0 0 1 16 0Z"/><line x1="4" y1="14" x2="20" y2="14"/><path d="M3 18h18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3Z"/></symbol>
+    <symbol id="i-sandwich" viewBox="0 0 24 24"><path d="M3 11a9 5 0 0 1 18 0Z"/><path d="M3 13a9 5 0 0 0 18 0Z"/></symbol>
+    <symbol id="i-fries" viewBox="0 0 24 24"><path d="M7 9l1.2 12h7.6L17 9"/><path d="M6.5 9h11"/><path d="M9.5 9V4"/><path d="M12 9V3"/><path d="M14.5 9V5"/></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8l1.75 12.28A2 2 0 0 0 9.75 22h4.5a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M12 8l1-5h2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.2" y1="6.8" x2="17.2" y2="6.8"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+  </svg>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader">
+    <img src="statics/logo santo.png" alt="SANTO" class="preloader__logo" />
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <img src="statics/logo santo.png" alt="Logo SANTO" />
+        <span class="nav__brand-text">SANTO<small>Hamburguesas &amp; Bistró</small></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#inicio" class="nav__link is-active">Inicio</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#menu" class="nav__link">Menú</a>
+        <a href="#domicilios" class="nav__link">Domicilios</a>
+        <a href="#ubicacion" class="nav__link">Ubicación</a>
+        <a href="https://wa.me/573123957174?text=Hola%20SANTO%20%F0%9F%8D%94%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn--gold nav__cta">Pedir ahora</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="inicio">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto">
+        <source src="statics/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Restrepo · Meta &nbsp;✦&nbsp; Chef Luciano Gómez</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line reveal delay-1">SANTO</span>
+        </h1>
+        <p class="hero__subtitle reveal delay-2">Hamburguesas &amp; Bistró</p>
+        <p class="hero__lead reveal delay-3">Un pecado que se perdona. Carne a la parrilla, pan artesanal y recetas de autor en el corazón de Restrepo.</p>
+        <div class="hero__actions reveal delay-4">
+          <a href="#menu" class="btn btn--gold">Ver el menú</a>
+          <a href="https://wa.me/573123957174?text=Hola%20SANTO%20%F0%9F%8D%94%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07a8.18 8.18 0 0 1-2.4-1.49 9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35zM12.04 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8a9.75 9.75 0 0 1 9.8 9.81c0 5.4-4.4 9.79-9.8 9.79zm8.34-18.13A11.72 11.72 0 0 0 12.04 .2C5.54.2.25 5.5.25 12c0 2.08.54 4.11 1.58 5.9L.15 24l6.25-1.64a11.78 11.78 0 0 0 5.63 1.44h.01c6.5 0 11.79-5.3 11.79-11.8 0-3.15-1.22-6.11-3.45-8.34z"/></svg>
+            Pedir a domicilio
+          </a>
+        </div>
+        <div class="hero__badges reveal delay-5">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Lun – Dom · 5:00 pm – 10:00 pm</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Calle 7 # 5-24, Centro de Restrepo</span>
+        </div>
+      </div>
+
+      <a href="#nosotros" class="hero__scroll" aria-label="Bajar a la siguiente sección">
+        <span class="hero__scroll-mouse"></span>
+        Desliza
+      </a>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="marquee-clip" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Hamburguesas ✦ Costillas BBQ ✦ Sándwiches ✦ Empanadas ✦ Cortes del Bistró ✦ Hechas a la parrilla ✦ </span>
+          <span>Hamburguesas ✦ Costillas BBQ ✦ Sándwiches ✦ Empanadas ✦ Cortes del Bistró ✦ Hechas a la parrilla ✦ </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ NOSOTROS ══════════ -->
+    <section class="about section" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="phone-frame">
+            <video id="chefVideo" src="statics/video.mp4" playsinline preload="metadata"></video>
+            <button class="phone-frame__play" id="chefPlayBtn" aria-label="Reproducir video del chef">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <p class="about__media-hint"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-play"/></svg> Conoce nuestra historia en voz del chef</p>
+        </div>
+
+        <div class="about__text">
+          <p class="section__eyebrow reveal">Nuestra historia</p>
+          <h2 class="section__title reveal delay-1">Cocina con alma,<br /><em>hecha en Restrepo</em></h2>
+          <p class="reveal delay-2">SANTO nació en el centro de Restrepo, Meta, con una idea sencilla: tratar la hamburguesa con el respeto de un plato de bistró. Carne seleccionada, pan artesanal, salsas de la casa y fuego de parrilla — sin atajos.</p>
+          <p class="reveal delay-3">Detrás de cada plato está la mano del <strong>Chef Luciano Gómez</strong>, que combina técnica de cocina de autor con el sabor llanero de nuestra tierra. Aquí cada visita es un ritual: se comparte, se disfruta y se repite.</p>
+
+          <ul class="about__features reveal delay-4">
+            <li>
+              <span class="about__feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span>
+              <div><strong>Parrilla y humo</strong><span>Carne sellada al fuego, jugosa por dentro</span></div>
+            </li>
+            <li>
+              <span class="about__feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-bread"/></svg></span>
+              <div><strong>Pan artesanal</strong><span>Horneado para nuestras recetas</span></div>
+            </li>
+            <li>
+              <span class="about__feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <div><strong>Sabor local</strong><span>Ingredientes frescos de la región</span></div>
+            </li>
+          </ul>
+
+          <p class="about__signature reveal delay-5">Chef Luciano Gómez</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MENÚ ══════════ -->
+    <section class="menu section section--alt" id="menu">
+      <div class="container">
+        <p class="section__eyebrow reveal">La carta</p>
+        <h2 class="section__title reveal delay-1">El menú de <em>SANTO</em></h2>
+        <p class="section__intro reveal delay-2">Todo se prepara al momento. Pregunta por la recomendación del chef.</p>
+
+        <div class="menu__tabs reveal delay-3" id="menuTabs" role="tablist"></div>
+        <div class="menu__grid" id="menuGrid"></div>
+
+        <p class="menu__note reveal">* Precios en pesos colombianos. La carta puede variar según disponibilidad del día.</p>
+      </div>
+    </section>
+
+    <!-- ══════════ DOMICILIOS ══════════ -->
+    <section class="delivery section" id="domicilios">
+      <div class="container delivery__grid">
+        <div class="delivery__poster reveal">
+          <img src="statics/imagen.jpg" alt="Pide tu hamburguesa favorita hasta tu casa — Domicilios SANTO" loading="lazy" />
+          <span class="delivery__poster-badge"><svg class="icon" aria-hidden="true"><use href="#i-bike"/></svg> Llegamos caliente</span>
+        </div>
+        <div class="delivery__text">
+          <p class="section__eyebrow reveal">Domicilios</p>
+          <h2 class="section__title reveal delay-1">Tu favorita,<br /><em>hasta tu casa</em></h2>
+          <p class="reveal delay-2">¿Antojo santo? Te lo llevamos caliente y recién hecho a cualquier punto de Restrepo. Escríbenos por WhatsApp o llámanos y en minutos está en camino.</p>
+
+          <div class="delivery__phone reveal delay-3">
+            <span>Línea de domicilios</span>
+            <a href="tel:+573123957174">312 395 7174</a>
+          </div>
+
+          <div class="hero__actions reveal delay-4">
+            <a href="https://wa.me/573123957174?text=Hola%20SANTO%20%F0%9F%8D%94%20quiero%20pedir%20a%20domicilio" target="_blank" rel="noopener" class="btn btn--gold">Pedir por WhatsApp</a>
+            <a href="tel:+573123957174" class="btn btn--ghost">Llamar ahora</a>
+          </div>
+
+          <p class="delivery__hours reveal delay-5"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Recibimos pedidos todos los días de <strong>5:00 pm a 10:00 pm</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ UBICACIÓN ══════════ -->
+    <section class="location section section--alt" id="ubicacion">
+      <div class="container">
+        <p class="section__eyebrow reveal">Visítanos</p>
+        <h2 class="section__title reveal delay-1">Estamos en el corazón<br />de <em>Restrepo</em></h2>
+
+        <div class="location__grid">
+          <div class="location__map reveal delay-2">
+            <iframe
+              title="Mapa — SANTO Hamburguesas & Bistró"
+              src="https://maps.google.com/maps?q=4.2610666,-73.5650711&z=17&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="location__info">
+            <div class="location__card reveal delay-2">
+              <span class="location__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <div>
+                <strong>Dirección</strong>
+                <p>Calle 7 # 5-24, Centro<br />Subiendo al parque principal, bajo el C.C. Plaza Roma<br />Restrepo, Meta</p>
+              </div>
+            </div>
+            <div class="location__card reveal delay-3">
+              <span class="location__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div>
+                <strong>Horario</strong>
+                <p>Lunes a domingo<br />5:00 pm – 10:00 pm</p>
+              </div>
+            </div>
+            <div class="location__card reveal delay-4">
+              <span class="location__icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+              <div>
+                <strong>Contacto</strong>
+                <p><a href="tel:+573123957174">312 395 7174</a><br /><a href="https://www.instagram.com/santococina/" target="_blank" rel="noopener">@santococina</a></p>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/D11mPH2a4GnyJRpx8" target="_blank" rel="noopener" class="btn btn--gold location__cta reveal delay-5">Cómo llegar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="statics/logo santo.png" alt="Logo SANTO" />
+        <p>Hamburguesas &amp; Bistró del Chef Luciano Gómez. Sabor que se respeta, en el centro de Restrepo, Meta.</p>
+      </div>
+      <div class="footer__col">
+        <strong>Explora</strong>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#domicilios">Domicilios</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+      <div class="footer__col">
+        <strong>Contacto</strong>
+        <a href="tel:+573123957174"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> 312 395 7174</a>
+        <a href="https://wa.me/573123957174" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a>
+        <a href="https://www.instagram.com/santococina/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> @santococina</a>
+        <a href="https://maps.app.goo.gl/D11mPH2a4GnyJRpx8" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Calle 7 # 5-24, Restrepo</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> SANTO Hamburguesas &amp; Bistró · Restrepo, Meta · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ══════════ WHATSAPP FLOTANTE ══════════ -->
+  <a href="https://wa.me/573123957174?text=Hola%20SANTO%20%F0%9F%8D%94%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07a8.18 8.18 0 0 1-2.4-1.49 9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35zM12.04 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8a9.75 9.75 0 0 1 9.8 9.81c0 5.4-4.4 9.79-9.8 9.79zm8.34-18.13A11.72 11.72 0 0 0 12.04.2C5.54.2.25 5.5.25 12c0 2.08.54 4.11 1.58 5.9L.15 24l6.25-1.64a11.78 11.78 0 0 0 5.63 1.44h.01c6.5 0 11.79-5.3 11.79-11.8 0-3.15-1.22-6.11-3.45-8.34z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
