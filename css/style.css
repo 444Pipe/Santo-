@@ -23,7 +23,12 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   background: var(--negro);
@@ -33,6 +38,7 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img, video { max-width: 100%; display: block; }
@@ -97,6 +103,7 @@ body::before {
   border-color: rgba(244, 237, 225, 0.35);
   color: var(--crema);
   background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 .btn--ghost:hover { border-color: var(--dorado); color: var(--dorado-claro); transform: translateY(-3px); }
@@ -157,6 +164,7 @@ body::before {
 }
 .nav.is-scrolled {
   background: rgba(11, 11, 13, 0.88);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   padding: 0.5rem 0;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
@@ -297,7 +305,7 @@ body::before {
   line-height: 0.95;
   letter-spacing: 0.04em;
   color: var(--crema);
-  text-shadow: 0 10px 60px rgba(0, 0, 0, 0.6);
+  /* Sin text-shadow: combinado con background-clip:text se pixela en iOS Safari */
 }
 .hero__title-line {
   display: inline-block;
@@ -305,6 +313,7 @@ body::before {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.55));
 }
 
 .hero__subtitle {
@@ -348,6 +357,7 @@ body::before {
   border: 1px solid rgba(244, 237, 225, 0.18);
   border-radius: 999px;
   background: rgba(11, 11, 13, 0.45);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   color: rgba(244, 237, 225, 0.85);
 }
@@ -398,8 +408,10 @@ body::before {
 }
 
 /* ══════════ MARQUEE ══════════ */
-/* Recorta solo el desborde horizontal que genera la cinta rotada/escalada */
+/* Recorta solo el desborde horizontal que genera la cinta rotada/escalada.
+   'hidden' es el fallback para iOS < 16, que no soporta 'clip'. */
 .marquee-clip {
+  overflow-x: hidden;
   overflow-x: clip;
   overflow-y: visible;
 }
@@ -583,6 +595,7 @@ body::before {
   border-radius: 50%;
   border: none;
   background: rgba(42, 42, 47, 0.62);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   color: #fff;
   display: flex;
@@ -951,8 +964,8 @@ body::before {
 /* ══════════ WHATSAPP FLOTANTE ══════════ */
 .whatsapp-fab {
   position: fixed;
-  bottom: 1.6rem;
-  right: 1.6rem;
+  bottom: calc(1.6rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.6rem + env(safe-area-inset-right, 0px));
   z-index: 90;
   width: 60px;
   height: 60px;
@@ -1019,6 +1032,7 @@ body::before {
     position: fixed;
     inset: 0;
     background: rgba(11, 11, 13, 0.97);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     flex-direction: column;
     justify-content: center;
@@ -1088,7 +1102,12 @@ body::before {
 
   .footer { padding-top: 3.5rem; }
   .footer__grid { grid-template-columns: 1fr; gap: 2.2rem; padding-bottom: 2.6rem; }
-  .whatsapp-fab { width: 54px; height: 54px; bottom: 1.2rem; right: 1.2rem; }
+  .whatsapp-fab {
+    width: 54px;
+    height: 54px;
+    bottom: calc(1.2rem + env(safe-area-inset-bottom, 0px));
+    right: calc(1.2rem + env(safe-area-inset-right, 0px));
+  }
 }
 
 /* Móviles compactos */
