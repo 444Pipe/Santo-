@@ -275,6 +275,16 @@ body::before {
   transform: scale(1.05);
 }
 
+/* iOS pinta su propio botón de play sobre videos sin controles
+   cuando bloquea el autoplay (bajo consumo / ahorro de datos) — ocultarlo */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero__video::-webkit-media-controls {
+  display: none !important;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;

@@ -178,6 +178,28 @@ if (tabsEl && gridEl) {
   renderItems(MENU.categorias[0].id);
 }
 
+// ══════════ VIDEO DEL HERO (autoplay robusto en iOS/Android) ══════════
+const heroVideo = document.querySelector(".hero__video");
+if (heroVideo) {
+  heroVideo.defaultMuted = true;
+  heroVideo.muted = true;
+  const tryPlayHero = () => {
+    if (heroVideo.paused) {
+      const p = heroVideo.play();
+      if (p) p.catch(() => {});
+    }
+  };
+  window.addEventListener("load", tryPlayHero);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) tryPlayHero();
+  });
+  // Si el sistema bloqueó el autoplay (p. ej. modo bajo consumo en iPhone),
+  // el primer toque o scroll del usuario ya permite reproducirlo.
+  ["touchstart", "click", "scroll"].forEach((ev) =>
+    document.addEventListener(ev, tryPlayHero, { once: true, passive: true })
+  );
+}
+
 // ══════════ PRELOADER ══════════
 window.addEventListener("load", () => {
   const pre = document.getElementById("preloader");
